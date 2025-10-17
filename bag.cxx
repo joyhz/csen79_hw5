@@ -48,15 +48,16 @@ namespace csen79 {
     };
 
     bool Bag::isEmpty() const {
-        return top < 0;
+        //not sure if we still need this?
     }
 
     bool Bag::isFull() const {
-        return size() >= DATASIZE;  // Can't compare top w/ DATASIZE, compares int w/ size_t (unsigned int) --> have to convert top to size_t to compare
+        //return size() >= DATASIZE;
     }
 
     std::size_t Bag::size() const {
-        return static_cast<std::size_t>(top + 1);
+        // need to change the top + 1
+        //return static_cast<std::size_t>(top + 1);
     }
 
     void Bag::setData(const int i, const Data &d) {
