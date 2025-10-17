@@ -1,5 +1,6 @@
 /*
- * Sin-Yaw Wang <swang24@scu.edu>
+ * Names: Yuto Fraley, Theodore Griffin - Jones, Michael Tiburcio, Joy Zhu
+ * Emails: yfraley@scu.edu, tgriffinjones@scu.edu, mtiburcio@scu.edu, jhzhu@scu.edu
  * recipe for containers using C-style array
  */
 #ifndef BAG_H
@@ -22,9 +23,12 @@ public:
     // access functions
     const Data &getData(const int) const;
     void setData(const int, const Data &);
-    void push(const Data &);
-    Data pop();
+    void enQ(const Data &);
+    Data deQ();
     void print() const;
+    bool isEmpty() const;
+    bool isFull() const;
+    std::size_t size() const;
 
 private:
     // data storage
